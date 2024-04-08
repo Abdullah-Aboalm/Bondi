@@ -1,0 +1,154 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #079a9b;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #a3a7a8;
+}
+/* navbar */
+.navbar,
+.section-6,
+.footer {
+  background-color: var(--dark-color);
+}
+.navbar ul li:hover a {
+  color: var(--green-color) !important;
+}
+.navbar ul li a.active {
+  color: var(--green-color) !important;
+}
+.navbar ul li svg {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color) !important;
+  box-shadow: none;
+}
+/* end navbar */
+.landing {
+  height: 100vh;
+  background-color: var(--dark-color);
+  display: flex;
+  p {
+    color: rgb(196, 196, 196);
+  }
+}
+.heading {
+  width: fit-content;
+  img {
+    width: 80px;
+    font-size: 13px;
+    color: rgb(196, 196, 196);
+  }
+  p {
+    font-size: 13px;
+    color: rgb(196, 196, 196);
+  }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: lightskyblue;
+  }
+}
+.section-1 {
+  h1 {
+    font-size: 150px;
+    margin-bottom: -70px;
+    z-index: -1;
+    color: rgba(233, 233, 233, 0.626);
+  }
+  svg {
+    font-size: 50px;
+    color: rgb(74, 212, 199);
+  }
+  h2 {
+    color: #ffd75c;
+  }
+  p {
+    color: #c6d1d6;
+  }
+}
+.section-2 {
+  background-color: #eff7fa;
+  ul {
+    width: fit-content;
+  }
+  li {
+    color: #b4bfc4;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      color: red;
+    }
+  }
+  [class^="col"] {
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+    &:hover::before {
+      left: 0;
+    }
+  }
+  [class^="col"]::before {
+    content: "Application";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #33d1cc69;
+    transition: .3s;
+  }
+}
+.section-3 {
+  p {
+    color: #bec3c4;
+  }
+}
+.section-4 {
+  background-color: #eff7fa;
+}
+.section-8 {
+  input::placeholder {
+    color: white;
+  }
+  input:focus {
+    outline: none;
+  }
+}
